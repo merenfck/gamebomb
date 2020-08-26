@@ -14,5 +14,7 @@ class dWall {
     drawdWall() {
         console.log("what is col?", this.col)
         image(this.image, 800, 800, 100, 100)
+        image(this.image, 800, 700, 100, 100)
+        image(this.image, 700, 800, 100, 100)
     }
 }

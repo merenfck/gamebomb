@@ -33,6 +33,8 @@ class Game {
       this.treasureImg = loadImage("assets/treasure.png")
       this.playerImg = loadImage("assets/character-down.png")
       this.wallImg = loadImage("assets/wallstable.png")
+      this.dwallImg = loadImage("assets/wallunstable.png")
+      this.bombImg = loadImage("assets/bomb.png")
       
     }
   
@@ -43,10 +45,11 @@ class Game {
       console.log(this.treasure.col, this.treasure.row)
       this.player = new Player(0,0);
       this.player.image = this.playerImg;
+      
     }
 
     setupdWall() { 
-    this.dwall = new Wall(800,800)
+    this.dwall = new dWall(800,800)
     this.dwall.image = this.dwallImg
     console.log(this.dwall.col, this.dwall.row)
     }
@@ -57,11 +60,18 @@ class Game {
       // this.wall.setRandomPosition()
       console.log(this.wall.col, this.wall.row)
       }
+
+      setupBomb() {
+        this.bomb = new Bomb(200,200)
+        this.bomb.image = this.bombImg
+      }
   
     drawGame() {
       this.treasure.drawTreasure();
       this.player.drawPlayer();
-      this.wall.drawWall()
+      this.wall.drawWall();
+      this.dwall.drawdWall();
+      this.bomb.drawBomb()
       if (this.player.col === this.treasure.col && this.player.row === this.treasure.row) {
         this.treasure.setRandomPosition()
       }

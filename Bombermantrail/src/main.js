@@ -11,6 +11,7 @@ const game = new Game();
    game.setupGame()
    game.setupWall()
    game.setupdWall()
+   game.setupBomb()
  }
 
  function draw() {
