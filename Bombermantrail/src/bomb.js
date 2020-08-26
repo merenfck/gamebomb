@@ -12,8 +12,9 @@ class Bomb {
     setupBomb() {
     }
 
-    throwBomb(){
-        this.attached=true
+    throwBomb() {
+     this.attached =false
+        this.row += 300;
     }
 
     drawBomb() {

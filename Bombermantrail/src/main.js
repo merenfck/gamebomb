@@ -34,4 +34,8 @@ const game = new Game();
    if (keyCode === 39) {
      game.player.moveRight();
    }
+   if(keyCode === 32){
+     console.log("hello")
+     game.bomb.throwBomb()
+   }
  }

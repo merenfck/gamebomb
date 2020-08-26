@@ -31,6 +31,8 @@ class Player {
 
         image(this.image, this.col, this.row, 100, 100)
     }
+    
+    }
 
 
-} 
+

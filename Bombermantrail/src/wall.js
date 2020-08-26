@@ -28,7 +28,6 @@ class Wall {
         
 
         
-        image(this.image, 700, 800, 100, 100)
         
     }
     }
