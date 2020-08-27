@@ -72,14 +72,19 @@ class Game {
       this.wall.drawWall();
       this.dwall.drawdWall();
       this.bomb.drawBomb()
-      if (this.player.col === this.treasure.col && this.player.row === this.treasure.row) {
+      if (this.bomb.col === this.treasure.col && this.bomb.row === this.treasure.row) {
         this.treasure.setRandomPosition()
+        this.bomb.attached=true
+        //score += 1
+        //console.log(`Your score is ${score}`)
       }
       let score = 0
-      if (this.player.col === this.treasure.col && this.player.row === this.treasure.row) {
-        score += 1
-        console.log(`Your score is ${score}`)
+      if (this.player.col === this.bomb.col && this.player.row === this.bomb.row) {
+        this.bomb.attached=true
+        
+        
       }
+
     }
   
   }

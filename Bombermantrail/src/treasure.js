@@ -3,6 +3,7 @@ class Treasure {
         this.col = col;
         this.row = row;
         this.image;
+        this.goUp=true
     }
     preloadTreasure() {
         this.image = loadImage("assets/treasure.png")
@@ -27,8 +28,37 @@ class Treasure {
         }
 
     }
+    moveUp() {
+        this.row -= 100;
+    }
+
+    moveDown() {
+        this.row += 100;
+    }
+
+    moveLeft() {
+        this.col -= 100;
+    }
+
+    moveRight() {
+        this.col += 100;
+    }
 
     drawTreasure() {
+        if(frameCount%120==0){
+            if(this.row<=0){
+                this.goUp=false
+            }
+            if(this.row>=height){
+                this.goUp=true
+            }
+           if(this.goUp){
+               this.moveUp()
+           }
+           else{
+               this.moveDown()
+           }
+        }
         image(this.image, this.col, this.row, 100, 100)
         image(this.image, this.col, this.row, 100, 100)
     }

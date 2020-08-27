@@ -13,8 +13,23 @@ class Bomb {
     }
 
     throwBomb() {
-     this.attached =false
+     this.attached = false
         this.row += 300;
+    }
+
+    throwBombr() {
+        this.attached = false
+        this.col += 300;
+    }
+
+    throwBombl() {
+        this.attached = false
+        this.col -= 300;
+    }
+    
+    throwBombup() {
+        this.attached = false
+        this.row -= 300;
     }
 
     drawBomb() {

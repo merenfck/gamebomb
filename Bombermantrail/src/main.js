@@ -15,6 +15,8 @@ const game = new Game();
  }
 
  function draw() {
+  clear()
+
    game.drawGrid();
    game.drawGame();
  }
@@ -36,6 +38,16 @@ const game = new Game();
    }
    if(keyCode === 32){
      console.log("hello")
-     game.bomb.throwBomb()
+     game.bomb.throwBomb();
+   }
+   if(keyCode === 93) {
+    console.log("hello")
+     game.bomb.throwBombr();
+   }
+   if(keyCode === 91)  {
+     game.bomb.throwBombl();
+   }
+   if(keyCode === 66) {
+     game.bomb.throwBombup()
    }
  }
