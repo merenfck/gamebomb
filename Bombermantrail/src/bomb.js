@@ -33,7 +33,7 @@ class Bomb {
     }
 
     drawBomb() {
-        console.log("what is col?", this.col)
+        
         if(this.attached){
             this.col=game.player.col
             this.row=game.player.row

@@ -45,6 +45,7 @@ class Game {
       console.log(this.treasure.col, this.treasure.row)
       this.player = new Player(0,0);
       this.player.image = this.playerImg;
+      this.score= 0
       
     }
 
@@ -75,15 +76,20 @@ class Game {
       if (this.bomb.col === this.treasure.col && this.bomb.row === this.treasure.row) {
         this.treasure.setRandomPosition()
         this.bomb.attached=true
-        //score += 1
-        //console.log(`Your score is ${score}`)
+        this.score += 1
+        console.log(`Your score is ${this.score}`)
+        document.querySelector('#score').innerText= this.score
       }
-      let score = 0
+      
       if (this.player.col === this.bomb.col && this.player.row === this.bomb.row) {
         this.bomb.attached=true
         
         
       }
+       // let score = 0
+       // if (this.bomb.col === this.treasure.col && this.bomb.row === this.treasure.row) {
+        // score += 1
+        // console.log(`Your score is ${score}`)
 
     }
   
